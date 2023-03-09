@@ -12,16 +12,22 @@ namespace EmployeeWageComputationProblem
         {
             int IS_FULL_TIME = 1;
             int emprateperhr = 20;
+            int IS_PART_TIME = 2;
             int emphrs = 0;
             int empwages = 0;
 
 
             Random random = new Random();
-            int empCheck = random.Next(2);
+            int empCheck = random.Next(3);
             if(empCheck == 1)
             {
                 Console.WriteLine("Employee is presrent");
                 emphrs = 8;
+            }
+            else if(empCheck == IS_PART_TIME)
+            {
+                Console.WriteLine("Employee is a part Timer");
+                emphrs = 4;
             }
             else
             {
@@ -31,6 +37,7 @@ namespace EmployeeWageComputationProblem
             empwages = emphrs * emprateperhr;
 
             Console.WriteLine("Total wages of employye is " + empwages);
+
         }
     }
 }
