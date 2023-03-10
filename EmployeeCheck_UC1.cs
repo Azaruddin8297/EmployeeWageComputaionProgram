@@ -16,6 +16,9 @@ namespace EmployeeWageComputationProblem
             int emphrs = 0;
             int empwages = 0;
             int empMonthWages = 0;
+            int Maxhrs = 100;
+            int Maxday = 20;
+            int MonthlyWorkingHrs = 0;
 
 
             Random random = new Random();
@@ -34,12 +37,16 @@ namespace EmployeeWageComputationProblem
                     emphrs = 0;
                     break;
             }
+            MonthlyWorkingHrs = emphrs * 20;
             empwages = emphrs * emprateperhr;
             empMonthWages = empwages * 20;
-
+           
             Console.WriteLine("Total wages of employye is " + empwages);
             Console.WriteLine("Total Monthly wages of employye is " + empMonthWages);
-
+            if (MonthlyWorkingHrs > Maxhrs)
+            {
+                Console.WriteLine("wages for hundread hrs");
+            }
 
         }
     }
