@@ -15,6 +15,7 @@ namespace EmployeeWageComputationProblem
             int IS_PART_TIME = 2;
             int emphrs = 0;
             int empwages = 0;
+            int empMonthWages = 0;
 
 
             Random random = new Random();
@@ -34,8 +35,11 @@ namespace EmployeeWageComputationProblem
                     break;
             }
             empwages = emphrs * emprateperhr;
+            empMonthWages = empwages * 20;
 
             Console.WriteLine("Total wages of employye is " + empwages);
+            Console.WriteLine("Total Monthly wages of employye is " + empMonthWages);
+
 
         }
     }
