@@ -19,7 +19,7 @@ namespace EmployeeWageComputationProblem
 
             Random random = new Random();
             int empCheck = random.Next(3);
-            if(empCheck == 1)
+            if(empCheck == IS_FULL_TIME)
             {
                 Console.WriteLine("Employee is presrent");
                 emphrs = 8;
